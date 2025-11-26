@@ -49,6 +49,9 @@ inputs:
   konnect-team-name:
     description: 'Team name to provision resources for'
     required: true
+  s3-prefix:
+    description: 's3-prefix'
+    required: true
 
 runs:
   using: 'composite'
@@ -111,7 +114,7 @@ runs:
       run: |
         terraform init -input=false -upgrade \
         -backend-config=config.s3.tfbackend \
-        -backend-config="bucket=${{ vars.S3_PREFIX }}.konnect.team.resources.${{ inputs.konnect-team-name }}" \
+        -backend-config="bucket=${{ inputs.s3-prefix }}.konnect.team.resources.${{ inputs.konnect-team-name }}" \
         -backend-config="region=${{ inputs.aws-region }}" \
       working-directory: ${{ github.action_path }}/terraform
 
