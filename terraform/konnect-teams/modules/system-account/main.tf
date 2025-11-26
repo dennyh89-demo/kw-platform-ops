@@ -27,7 +27,7 @@ resource "konnect_system_account_team" "this" {
   account_id = konnect_system_account.this.id
 }
 # Assign the system accounts to the Analytics Admin team
-resource "konnect_system_account_team" "this" {
+resource "konnect_system_account_team" "analytics" {
   team_id = "5952c8e7-ad3c-443c-be96-b22f93011a2e"
 
   account_id = konnect_system_account.this.id
