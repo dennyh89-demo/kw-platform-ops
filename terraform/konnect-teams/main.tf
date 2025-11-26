@@ -76,7 +76,7 @@ resource "aws_s3_bucket" "my_bucket" {
   bucket = "${var.s3_prefix}.konnect.team.resources.${local.sanitized_team_names[each.value.name]}"
 
   tags = {
-    Name        = "${var.s3_prefix}.konnect.team.resources.${local.sanitized_team_names[each.value.name]}"
+    # Name        = "${var.s3_prefix}.konnect.team.resources.${local.sanitized_team_names[each.value.name]}"
   }
 }
 
