@@ -14,3 +14,8 @@ variable "s3_prefix" {
   description = "S3 prefix"
   type        = string
 }
+
+variable "github_organization" {
+  description = "Github org"
+  type        = string
+}

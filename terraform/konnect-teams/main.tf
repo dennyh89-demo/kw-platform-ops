@@ -63,6 +63,7 @@ module "vault" {
   team_name                  = local.sanitized_team_names[each.value.name]
   system_account_secret_path = "system-accounts/sa-${local.sanitized_team_names[each.value.name]}"
   system_account_token       = module.system-account[each.value.name].system_account_token
+  github_organization = var.github_organization
 }
 
 ################################################################################
