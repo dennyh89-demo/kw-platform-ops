@@ -27,7 +27,7 @@ jobs:
       VAULT_TOKEN: ${{ secrets.VAULT_TOKEN }}
 
       # Terraform state S3 bucket
-      AWS_S3_BUCKET: "kw.konnect.teams"
+      AWS_S3_BUCKET: "${{ vars.S3_PREFIX }}.konnect.teams"
 
     steps:
       - name: Checkout repository

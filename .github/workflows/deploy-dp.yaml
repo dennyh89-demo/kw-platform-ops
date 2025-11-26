@@ -46,7 +46,7 @@ jobs:
           helm-chart-version: ${{ inputs.helm-chart-version }}
           kong-image-repo: kong/kong-gateway
           kong-image-tag: ${{ inputs.kong-image-tag }}
-          s3-bucket-name: kw.konnect.teams
+          s3-bucket-name: ${{ vars.S3_PREFIX }}.konnect.teams
           s3-prefix: fallback
           deploy-timeout-seconds: ${{ inputs.deploy-timeout-seconds }}
           vault-address: ${{ vars.VAULT_ADDR }}
